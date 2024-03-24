@@ -2,7 +2,7 @@ version: '3'
 
 services:
   nginx:
-    image: nginx
+    image: kenmurakii/kro-nginx:latest
     build: ./nginx
     ports:
       - "80:80"
@@ -10,12 +10,12 @@ services:
       - nuxt
       - golang
   nuxt:
-    image: nuxt
+    image: kenmurakii/kro-nuxt:latest
     build: .
     ports:
       - "3000:3000"
   golang:
-    image: golang
+    image: kenmurakii/kro-golang:latest
     build: ./kro-backend
     ports:
       - "8082:8082"
